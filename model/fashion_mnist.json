@@ -1,1 +1,1 @@
-[{"class_name": "Flatten", "weights": []}, {"class_name": "Dense", "config": {"activation": "linear"}, "weights": ["kernel"]}, {"class_name": "Dense", "config": {"activation": "softmax"}, "weights": ["kernel", "bias"]}]
+[{"class_name": "Flatten", "weights": []}, {"class_name": "Dense", "config": {"activation": "linear"}, "weights": ["kernel_0", "bias_0"]}, {"class_name": "Dense", "config": {"activation": "softmax"}, "weights": ["kernel_1", "bias_1"]}]
