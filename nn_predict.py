@@ -24,7 +24,7 @@ def dense(x, W, b):
 # Support only Dense, Flatten, relu, softmax now
 def nn_forward_h5(model_arch, weights, data):
     x = data
-    for layer in model_arch:
+    for layer in model_arch['config']['layers']:
         lname = layer['name']
         ltype = layer['type']
         cfg = layer['config']
