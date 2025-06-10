@@ -110,7 +110,7 @@ def _train_and_export():  # noqa: C901 – keep in single function for clarity
     # 1. Hyper‑parameters
     BATCH   = 256
     EPOCHS  = 20  # 30→≈95 % if you have time
-    LR      = 1e‑3
+    LR      = 0.001
     NAME    = "fashion_mnist"
 
     # 2. Data
@@ -157,7 +157,7 @@ def _train_and_export():  # noqa: C901 – keep in single function for clarity
                   loss="sparse_categorical_crossentropy", metrics=["accuracy"])
 
     cbs = [
-        tf.keras.callbacks.ReduceLROnPlateau("val_accuracy", factor=0.5, patience=3, min_lr=1e-5, verbose=1),
+        tf.keras.callbacks.ReduceLROnPlateau("val_accuracy", factor=0.5, patience=3, min_lr=0.00001, verbose=1),
         tf.keras.callbacks.EarlyStopping("val_accuracy", patience=6, restore_best_weights=True),
     ]
     model.fit(train_ds, validation_data=test_ds, epochs=EPOCHS, callbacks=cbs)
